@@ -5,7 +5,7 @@ use quote::quote;
 pub fn my_macro(_: TokenStream) -> TokenStream {
     let res = quote! {
         #[derive(serde::Serialize, serde::Deserialize)]
-        #[serde(rename_all=snake_case)]
+        #[serde(rename_all="snake_case")]
         enum MyStruct {
             Variant,
         }
